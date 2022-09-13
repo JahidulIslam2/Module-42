@@ -126,4 +126,135 @@ const newArrayEle=[...newArray,addphone]  //newArrayr sathe addphone obj ke add 
 console.table(newArrayEle)
 
 
+        ///truthy value falsy value
 
+//false,'',0,null,undefinded
+//truethy value anything,{},[]
+
+
+//check truethy value   if else
+
+let point = 50;
+
+if(point){
+    console.log('value true')
+}
+else{console.log('false value')}
+
+
+let pointf;
+//check false value
+
+if(!pointf){     //not oparator change value true value =false ,false = true
+    console.log('value is true')
+}
+else
+{console.log('value is false')}
+
+        //check truethy value  ternary operator
+
+
+// jodi ekta condition check korte hoy tahole ternary operator diye sohoje kora jabe jemon
+
+//(condition) ?  true : false
+let condition= !pointf ? true : false
+console.log(condition)
+
+
+    //use ternary operator make condition for execute function.but not return 
+
+    const funcCall2=()=>console.log(false);
+    const funcCall=()=>console.log(true);
+
+
+let print = pointf ? funcCall() : funcCall2()       //print er moddho return korbena kichu
+
+
+    //USE ternary operator for execute funtion defend with multiple condition
+
+let x=50;
+let y=100
+let z=150;
+let xz=80;
+
+ (x > y) ? funcCall() :funcCall2();
+    
+  (x > y && xz > z) ? funcCall() :funcCall2();         
+  (x > y || xz > z) ? funcCall() :funcCall2()
+    
+
+            //type convertion another way
+
+
+let num=5;
+let strNumber='10';
+
+const strNum =num +'';          //convert number to string
+
+const strToNum=+strNumber;      //string to number
+
+
+console.log(num)        
+console.log(strNum)    
+console.log(strNumber)    
+console.log(strToNum)     
+
+
+
+
+            //toggle, change type value..value jodi true hoy false kore dibe ,value jodi false hoy true kore dibe//
+            
+            
+
+let toggleValue = 'amiTrue';
+
+const store=toggleValue =!toggleValue;          // value true hole false kore dibe// value false hole true kore dibe.
+
+console.log(store)
+
+
+
+
+        //local storage //session storage//
+
+
+
+
+
+
+document.getElementById("sub-btn").addEventListener('click', function(){
+
+    const inputName=document.getElementById("input-name")
+    const Name=inputName.value;
+    const inputValue=document.getElementById("input-value")
+    const Value=inputValue.value;
+
+if(Name && Value ){
+    localStorage.setItem(Name,Value);
+}
+})
+
+
+
+document.getElementById("btn").addEventListener('click', function(){
+
+    const inputName=document.getElementById("name")
+    const Name=inputName.value;
+    const inputValue=document.getElementById("value")
+    const Value=inputValue.value;
+        
+    localStorage.setItem('Name',JSON.stringify({Value}))
+
+})
+
+
+
+//object declaration shorthand
+
+const book='english';
+const note='math';
+const historical='global world'
+
+// const self2={book:book,note:note,historical:historical}
+const self={book,note,historical}
+console.log(self)
